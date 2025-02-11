@@ -13,12 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60e6574a-6e23-4afe-94c0-f01530c9c48b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/VehicleTemplate/Blueprints/SportsCar/BP_SportsCar_Pawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/VehicleTemplate/Blueprints/SportsCar/BP_SportsCar_Pawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/3/CE/UQJEYDXV66IS1NNQIVD3VN.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/3/CE/UQJEYDXV66IS1NNQIVD3VN.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/4/CU/8NKLN0SW6SGF2K187FWRCZ.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/4/CU/8NKLN0SW6SGF2K187FWRCZ.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeonCar.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/NeonCar.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCar.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCar.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +184,7 @@
       <workItem from="1739175907903" duration="8204000" />
       <workItem from="1739185836681" duration="15000" />
       <workItem from="1739185879294" duration="1721000" />
+      <workItem from="1739267362963" duration="463000" />
     </task>
     <servers />
   </component>

@@ -55,19 +55,19 @@ void AAIVehicleControlle::FollowSplinePath()
 	CurveFactor = FMath::Clamp(CurveFactor, -1.0f, 1.0f); 
 
 	// Déterminer la vitesse cible en fonction de la courbure
-	float TargetSpeed = FMath::Lerp(200.0f, 2500.0f, (CurveFactor + 1.0f) / 2.0f); // 500 dans virages serrés, 2500 en ligne droite
+	float TargetSpeed = FMath::Lerp(300.0f, 2500.0f, (CurveFactor + 1.0f) / 2.0f); // 500 dans virages serrés, 2500 en ligne droite
 	float CurrentSpeed = VehiclePawn->GetVehicleMovementComponent()->GetForwardSpeed();
 
 	// Calculer l'intensité du freinage
 	float BrakeValue = 0.0f;
 	if (CurrentSpeed > TargetSpeed)
 	{
-		BrakeValue = FMath::Clamp((CurrentSpeed - TargetSpeed) / 2500.0f, 0.0f, 1.0f);
+		BrakeValue = FMath::Clamp((CurrentSpeed - TargetSpeed) / 2000.0f, 0.0f, 1.0f);
 	}
 
 	// Appliquer le frein et l’accélération
 	VehiclePawn->GetVehicleMovementComponent()->SetBrakeInput(BrakeValue);
-	VehiclePawn->GetVehicleMovementComponent()->SetThrottleInput(FMath::Clamp(1.0f - BrakeValue, 0.2f, 1.0f)); 
+	VehiclePawn->GetVehicleMovementComponent()->SetThrottleInput(FMath::Clamp(1.0f - BrakeValue, 0.6f, 1.0f)); 
 	VehiclePawn->GetVehicleMovementComponent()->SetSteeringInput(SteeringValue * 2.0f); 
 
 	// Vérifier si on est proche du point pour passer au suivant
