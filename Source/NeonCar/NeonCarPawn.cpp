@@ -10,6 +10,8 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "ChaosWheeledVehicleMovementComponent.h"
+#include "EngineUtils.h"
+#include "Components/SplineComponent.h"
 
 #define LOCTEXT_NAMESPACE "VehiclePawn"
 
@@ -60,11 +62,12 @@ void ANeonCarPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputC
 
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
 	{
-		// steering 
+		// steering
 		EnhancedInputComponent->BindAction(SteeringAction, ETriggerEvent::Triggered, this, &ANeonCarPawn::Steering);
 		EnhancedInputComponent->BindAction(SteeringAction, ETriggerEvent::Completed, this, &ANeonCarPawn::Steering);
 
-		// throttle 
+
+		// throttle
 		EnhancedInputComponent->BindAction(ThrottleAction, ETriggerEvent::Triggered, this, &ANeonCarPawn::Throttle);
 		EnhancedInputComponent->BindAction(ThrottleAction, ETriggerEvent::Completed, this, &ANeonCarPawn::Throttle);
 
@@ -96,6 +99,15 @@ void ANeonCarPawn::Tick(float Delta)
 {
 	Super::Tick(Delta);
 
+	for (TActorIterator<AActor> It(GetWorld()); It; ++It)
+	{
+		if (It->ActorHasTag("CircuitSpline")) // Ajoute ce tag à ta spline dans l’éditeur
+		{
+			TargetSpline = *It;
+			break;
+		}
+	}
+	
 	// add some angular damping if the vehicle is in midair
 	bool bMovingOnGround = ChaosVehicleMovement->IsMovingOnGround();
 	GetMesh()->SetAngularDamping(bMovingOnGround ? 0.0f : 3.0f);
@@ -105,13 +117,15 @@ void ANeonCarPawn::Tick(float Delta)
 	CameraYaw = FMath::FInterpTo(CameraYaw, 0.0f, Delta, 1.0f);
 
 	BackSpringArm->SetRelativeRotation(FRotator(0.0f, CameraYaw, 0.0f));
+
+	UpdateRaceProgress();
 }
 
 void ANeonCarPawn::Steering(const FInputActionValue& Value)
 {
 	// get the input magnitude for steering
 	float SteeringValue = Value.Get<float>();
-
+	
 	// add the input
 	ChaosVehicleMovement->SetSteeringInput(SteeringValue);
 }
@@ -120,7 +134,7 @@ void ANeonCarPawn::Throttle(const FInputActionValue& Value)
 {
 	// get the input magnitude for the throttle
 	float ThrottleValue = Value.Get<float>();
-
+	
 	// add the input
 	ChaosVehicleMovement->SetThrottleInput(ThrottleValue);
 }
@@ -129,7 +143,7 @@ void ANeonCarPawn::Brake(const FInputActionValue& Value)
 {
 	// get the input magnitude for the brakes
 	float BreakValue = Value.Get<float>();
-
+	
 	// add the input
 	ChaosVehicleMovement->SetBrakeInput(BreakValue);
 }
@@ -202,6 +216,16 @@ void ANeonCarPawn::ResetVehicle(const FInputActionValue& Value)
 	GetMesh()->SetPhysicsLinearVelocity(FVector::ZeroVector);
 
 	UE_LOG(LogTemplateVehicle, Error, TEXT("Reset Vehicle"));
+}
+
+void ANeonCarPawn::UpdateRaceProgress()
+{
+	if (!TargetSpline) return;
+
+	USplineComponent* Spline = TargetSpline->FindComponentByClass<USplineComponent>();
+	if (!Spline) return;
+
+	DistanceOnSpline = Spline->FindInputKeyClosestToWorldLocation(GetActorLocation());
 }
 
 #undef LOCTEXT_NAMESPACE

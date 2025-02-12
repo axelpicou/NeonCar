@@ -34,6 +34,7 @@ protected:
 
 	/** Pointer to the UI widget */
 	TObjectPtr<UNeonCarUI> VehicleUI;
+	
 
 	// Begin Actor interface
 protected:

@@ -78,6 +78,12 @@ protected:
 	/** Keeps track of which camera is active */
 	bool bFrontCameraActive = false;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Race")
+	float DistanceOnSpline = 0.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Race")
+	AActor* TargetSpline = nullptr;	
+
 public:
 	ANeonCarPawn();
 
@@ -136,4 +142,8 @@ public:
 	FORCEINLINE UCameraComponent* GetBackCamera() const { return BackCamera; }
 	/** Returns the cast Chaos Vehicle Movement subobject */
 	FORCEINLINE const TObjectPtr<UChaosWheeledVehicleMovementComponent>& GetChaosVehicleMovement() const { return ChaosVehicleMovement; }
+	/** Returns the Distance Spline*/
+	float GetDistance () const{	return DistanceOnSpline; }
+	/** Update Race classement*/
+	void UpdateRaceProgress();	
 };

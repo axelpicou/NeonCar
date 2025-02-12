@@ -67,7 +67,7 @@ void AAIVehicleControlle::FollowSplinePath()
 
 	// Appliquer le frein et l’accélération
 	VehiclePawn->GetVehicleMovementComponent()->SetBrakeInput(BrakeValue);
-	VehiclePawn->GetVehicleMovementComponent()->SetThrottleInput(FMath::Clamp(1.0f - BrakeValue, 0.6f, 1.0f)); 
+	VehiclePawn->GetVehicleMovementComponent()->SetThrottleInput(FMath::Clamp(1.0f - BrakeValue, 0.8f, 1.0f)); 
 	VehiclePawn->GetVehicleMovementComponent()->SetSteeringInput(SteeringValue * 2.0f); 
 
 	// Vérifier si on est proche du point pour passer au suivant
