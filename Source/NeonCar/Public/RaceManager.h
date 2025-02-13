@@ -23,6 +23,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category="FinishRace")
 	void OnFinishRace(ANeonCarPawn* FinishedVehicle);
 
+	UFUNCTION(BlueprintCallable)
+	bool ValideChecpoint(ANeonCarPawn* Vehicle, int32 CheckpointIndex);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -39,5 +42,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "UI")
 	TSubclassOf<UUserWidget> VictoryWidgetClass;
-	
+
+	TMap<ANeonCarPawn*, int32> LastCheckpoint;
+
+	UPROPERTY(EditAnywhere, Category = "Checkpoint")
+	int32 TotalCheckpoints;
 };
