@@ -82,7 +82,13 @@ protected:
 	float DistanceOnSpline = 0.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Race")
-	AActor* TargetSpline = nullptr;	
+	AActor* TargetSpline = nullptr;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Race")
+	int CurrentLap = 1;
+
+	FVector LocationReset;
+	FRotator RotationReset;
 	
 public:
 	ANeonCarPawn();
@@ -125,7 +131,9 @@ protected:
 	void ToggleCamera(const FInputActionValue& Value);
 
 	/** Handles reset vehicle input */
-	void ResetVehicle(const FInputActionValue& Value);
+	void ResetVehicleInput(const FInputActionValue& Value);
+
+	
 
 	/** Called when the brake lights are turned on or off */
 	UFUNCTION(BlueprintImplementableEvent, Category="Vehicle")
@@ -149,4 +157,9 @@ public:
 	/** Finish Race Line*/
 	UFUNCTION(BlueprintCallable)
 	void OnCrossFinishLine();
+
+	void ResetVehicle();
+
+	FVector SetLocation(FVector newLocation) ;
+	FRotator SetRotation(FRotator newRotation) ;
 };

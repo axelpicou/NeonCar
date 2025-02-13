@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RaceManager.h"
 #include "GameFramework/GameModeBase.h"
 #include "NeonCarGameMode.generated.h"
 
@@ -13,6 +14,12 @@ class ANeonCarGameMode : public AGameModeBase
 
 public:
 	ANeonCarGameMode();
+
+protected:
+	virtual void BeginPlay() override;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Race")
+	ARaceManager* RaceManager;
 };
 
 

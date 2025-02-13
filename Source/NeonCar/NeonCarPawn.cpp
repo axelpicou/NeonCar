@@ -89,7 +89,7 @@ void ANeonCarPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputC
 		EnhancedInputComponent->BindAction(ToggleCameraAction, ETriggerEvent::Triggered, this, &ANeonCarPawn::ToggleCamera);
 
 		// reset the vehicle 
-		EnhancedInputComponent->BindAction(ResetVehicleAction, ETriggerEvent::Triggered, this, &ANeonCarPawn::ResetVehicle);
+		EnhancedInputComponent->BindAction(ResetVehicleAction, ETriggerEvent::Triggered, this, &ANeonCarPawn::ResetVehicleInput);
 	}
 	else
 	{
@@ -201,15 +201,18 @@ void ANeonCarPawn::ToggleCamera(const FInputActionValue& Value)
 	BackCamera->SetActive(!bFrontCameraActive);
 }
 
-void ANeonCarPawn::ResetVehicle(const FInputActionValue& Value)
+void ANeonCarPawn::ResetVehicleInput(const FInputActionValue& Value)
+{
+	ResetVehicle();
+}
+
+void ANeonCarPawn::ResetVehicle()
 {
 	// reset to a location slightly above our current one
-	FVector ResetLocation = GetActorLocation() + FVector(0.0f, 0.0f, 50.0f);
+	FVector ResetLocation = LocationReset;
 
 	// reset to our yaw. Ignore pitch and roll
-	FRotator ResetRotation = GetActorRotation();
-	ResetRotation.Pitch = 0.0f;
-	ResetRotation.Roll = 0.0f;
+	FRotator ResetRotation = RotationReset;
 	
 	// teleport the actor to the reset spot and reset physics
 	SetActorTransform(FTransform(ResetRotation, ResetLocation, FVector::OneVector), false, nullptr, ETeleportType::TeleportPhysics);
@@ -236,6 +239,18 @@ void ANeonCarPawn::OnCrossFinishLine()
 	{
 		RaceManager->OnFinishRace(this);
 	}
+}
+
+FVector ANeonCarPawn::SetLocation(FVector newLocation)
+{
+	LocationReset = newLocation;
+	return LocationReset;
+}
+
+FRotator ANeonCarPawn::SetRotation(FRotator newRotation)
+{
+	RotationReset = newRotation;
+	return RotationReset;
 }
 
 #undef LOCTEXT_NAMESPACE

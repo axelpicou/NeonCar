@@ -63,6 +63,47 @@ void ARaceManager::OnFinishRace(ANeonCarPawn* FinishedVehicle)
 	}
 }
 
+bool ARaceManager::ValideChecpoint(ANeonCarPawn* Vehicle, int32 CheckpointIndex)
+{
+	if (LastCheckpoint.Contains(Vehicle))
+	{
+		int32 LastIndex = LastCheckpoint[Vehicle];
+		FVector ResetLocation = Vehicle->GetActorLocation();
+		FRotator ResetRotation = Vehicle->GetActorRotation();
+
+		Vehicle->SetLocation(ResetLocation);
+		Vehicle->SetRotation(ResetRotation);
+		
+		// Vérifie que le checkpoint est bien le suivant
+		if (CheckpointIndex == (LastIndex + 1) % TotalCheckpoints)
+		{
+			
+			LastCheckpoint[Vehicle] = CheckpointIndex;
+			UE_LOG(LogTemp, Warning, TEXT("%s a validé le checkpoint %d"), *Vehicle->GetName(), CheckpointIndex);
+
+			// Si c'est le dernier checkpoint, le tour est terminé
+			if (CheckpointIndex == TotalCheckpoints - 1)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("%s a complété un tour !"), *Vehicle->GetName());
+				LastCheckpoint.Reset();
+				return false;
+			}
+			return false;
+		}
+		else
+		{
+			Vehicle->ResetVehicle();
+			return true;
+		}
+	}
+	else
+	{
+		// Premier checkpoint pour ce véhicule
+		LastCheckpoint.Add(Vehicle, CheckpointIndex);
+		return false;
+	}
+}
+
 void ARaceManager::UpdateRacePositions()
 {
 	for ( ANeonCarPawn* Vehicle : Vehicles)

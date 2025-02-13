@@ -14,11 +14,16 @@
   <component name="ChangeListManager">
     <list default="true" id="60e6574a-6e23-4afe-94c0-f01530c9c48b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Drift/BP_FinishLine.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/BP_FinishLine.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Drift/Manager/BP_Manage_Race.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Manager/BP_Manage_Race.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Drift/Widget/WB_RaceClassement.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/3/CE/UQJEYDXV66IS1NNQIVD3VN.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/3/CE/UQJEYDXV66IS1NNQIVD3VN.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Drift/Widget/WBP_FinishClassement.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Widget/WBP_FinishClassement.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Drift/Widget/WBP_RaceClassement.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Widget/WBP_RaceClassement.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/WB_Classement.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/4/CU/8NKLN0SW6SGF2K187FWRCZ.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/4/CU/8NKLN0SW6SGF2K187FWRCZ.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/5/X6/AI4ASLFI9ROYCUCZSC4J6A.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/5/X6/AI4ASLFI9ROYCUCZSC4J6A.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/9/EQ/FPOBYFVJDTDDCDYOVCS6I6.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/9/EQ/FPOBYFVJDTDDCDYOVCS6I6.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/8/QJ/JQ3ZI4E2VXZJOFME0DKHHE.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/RaceManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Private/RaceManager.cpp" afterDir="false" />
@@ -206,6 +211,9 @@
       <workItem from="1739381885602" duration="770000" />
       <workItem from="1739388486593" duration="6389000" />
       <workItem from="1739454780827" duration="6631000" />
+      <workItem from="1739462723151" duration="3330000" />
+      <workItem from="1739468105064" duration="1399000" />
+      <workItem from="1739472521773" duration="9609000" />
     </task>
     <servers />
   </component>
