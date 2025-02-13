@@ -3,6 +3,9 @@
 
 #include "RaceManager.h"
 
+#include "HeadMountedDisplayTypes.h"
+#include "Blueprint/UserWidget.h"
+#include "Components/TextBlock.h"
 #include "Kismet/GameplayStatics.h"
 #include "NeonCar/NeonCarPawn.h"
 #include "NeonCar/NeonCarSportsCar.h"
@@ -35,6 +38,29 @@ void ARaceManager::BeginPlay()
 void ARaceManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void ARaceManager::OnFinishRace(ANeonCarPawn* FinishedVehicle)
+{
+	int32 Position = 0;
+	if (!FinishedVehicles.Contains(FinishedVehicle))
+	{
+		FinishedVehicles.Add(FinishedVehicle);
+		if (FinishedVehicle->GetName() == "Player")
+		{
+			Position = FinishedVehicles.Num();
+		}
+		UE_LOG(LogTemp, Warning, TEXT("%s a terminé la course en position %d"), *FinishedVehicle->GetName(), FinishedVehicles.Num());
+	}
+
+	// Vérifie si tous les véhicules ont terminé
+	if (FinishedVehicles.Num() == Vehicles.Num())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Tous les véhicules ont terminé !"));
+
+		// Déclare le vainqueur (le premier du tableau)
+		ANeonCarPawn* Winner = FinishedVehicles[0];		
+	}
 }
 
 void ARaceManager::UpdateRacePositions()

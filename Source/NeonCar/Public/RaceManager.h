@@ -18,6 +18,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category="RaceManager")
 	void UpdateRacePositions();
 
+	void DisplayVictoryScreen(int32 Position) const;
+
+	UFUNCTION(BlueprintCallable, Category="FinishRace")
+	void OnFinishRace(ANeonCarPawn* FinishedVehicle);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -28,4 +33,11 @@ public:
 	// Array all Vehicles
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Race")
 	TArray<class ANeonCarPawn*> Vehicles;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="FinishRace")
+	TArray<ANeonCarPawn*> FinishedVehicles;
+
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UUserWidget> VictoryWidgetClass;
+	
 };

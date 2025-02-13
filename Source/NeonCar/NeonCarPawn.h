@@ -83,7 +83,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Race")
 	AActor* TargetSpline = nullptr;	
-
+	
 public:
 	ANeonCarPawn();
 
@@ -145,5 +145,8 @@ public:
 	/** Returns the Distance Spline*/
 	float GetDistance () const{	return DistanceOnSpline; }
 	/** Update Race classement*/
-	void UpdateRaceProgress();	
+	void UpdateRaceProgress();
+	/** Finish Race Line*/
+	UFUNCTION(BlueprintCallable)
+	void OnCrossFinishLine();
 };

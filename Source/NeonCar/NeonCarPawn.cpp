@@ -11,7 +11,9 @@
 #include "InputActionValue.h"
 #include "ChaosWheeledVehicleMovementComponent.h"
 #include "EngineUtils.h"
+#include "RaceManager.h"
 #include "Components/SplineComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 #define LOCTEXT_NAMESPACE "VehiclePawn"
 
@@ -226,6 +228,14 @@ void ANeonCarPawn::UpdateRaceProgress()
 	if (!Spline) return;
 
 	DistanceOnSpline = Spline->FindInputKeyClosestToWorldLocation(GetActorLocation());
+}
+
+void ANeonCarPawn::OnCrossFinishLine()
+{
+	if (ARaceManager* RaceManager = Cast<ARaceManager>(UGameplayStatics::GetActorOfClass(GetWorld(), ARaceManager::StaticClass())))
+	{
+		RaceManager->OnFinishRace(this);
+	}
 }
 
 #undef LOCTEXT_NAMESPACE
