@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RaceManager.h"
 #include "WheeledVehiclePawn.h"
 #include "NeonCarPawn.generated.h"
 
@@ -84,6 +85,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Race")
 	AActor* TargetSpline = nullptr;
 
+	ARaceManager* RaceManager;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Race")
 	int CurrentLap = 1;
 
@@ -100,6 +103,8 @@ public:
 	// End Pawn interface
 
 	// Begin Actor interface
+
+	virtual void BeginPlay() override;
 
 	virtual void Tick(float Delta) override;
 

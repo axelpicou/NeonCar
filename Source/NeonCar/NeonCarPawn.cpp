@@ -97,6 +97,17 @@ void ANeonCarPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputC
 	}
 }
 
+void ANeonCarPawn::BeginPlay()
+{
+	Super::BeginPlay();
+
+	for (TActorIterator<ARaceManager> It(GetWorld()); It;)
+	{
+		RaceManager = *It;
+		break;
+	}
+}
+
 void ANeonCarPawn::Tick(float Delta)
 {
 	Super::Tick(Delta);
@@ -125,62 +136,89 @@ void ANeonCarPawn::Tick(float Delta)
 
 void ANeonCarPawn::Steering(const FInputActionValue& Value)
 {
-	// get the input magnitude for steering
-	float SteeringValue = Value.Get<float>();
+	if (RaceManager && RaceManager->bRaceStarted)
+	{
+		// get the input magnitude for steering
+		float SteeringValue = Value.Get<float>();
 	
-	// add the input
-	ChaosVehicleMovement->SetSteeringInput(SteeringValue);
+		// add the input
+		ChaosVehicleMovement->SetSteeringInput(SteeringValue);
+	}
+	
 }
 
 void ANeonCarPawn::Throttle(const FInputActionValue& Value)
 {
-	// get the input magnitude for the throttle
-	float ThrottleValue = Value.Get<float>();
+	if (RaceManager && RaceManager->bRaceStarted)
+	{
+		// get the input magnitude for the throttle
+		float ThrottleValue = Value.Get<float>();
 	
-	// add the input
-	ChaosVehicleMovement->SetThrottleInput(ThrottleValue);
+		// add the input
+		ChaosVehicleMovement->SetThrottleInput(ThrottleValue);
+	}
+	
 }
 
 void ANeonCarPawn::Brake(const FInputActionValue& Value)
 {
-	// get the input magnitude for the brakes
-	float BreakValue = Value.Get<float>();
+	if (RaceManager && RaceManager->bRaceStarted)
+	{
+		// get the input magnitude for the brakes
+		float BreakValue = Value.Get<float>();
 	
-	// add the input
-	ChaosVehicleMovement->SetBrakeInput(BreakValue);
+		// add the input
+		ChaosVehicleMovement->SetBrakeInput(BreakValue);
+	}
+	
 }
 
 void ANeonCarPawn::StartBrake(const FInputActionValue& Value)
 {
-	// call the Blueprint hook for the break lights
-	BrakeLights(true);
+	if (RaceManager && RaceManager->bRaceStarted)
+	{
+		// call the Blueprint hook for the break lights
+		BrakeLights(true);
+	}
+	
 }
 
 void ANeonCarPawn::StopBrake(const FInputActionValue& Value)
 {
-	// call the Blueprint hook for the break lights
-	BrakeLights(false);
+	if (RaceManager && RaceManager->bRaceStarted)
+	{
+		// call the Blueprint hook for the break lights
+		BrakeLights(false);
 
-	// reset brake input to zero
-	ChaosVehicleMovement->SetBrakeInput(0.0f);
+		// reset brake input to zero
+		ChaosVehicleMovement->SetBrakeInput(0.0f);
+	}
 }
 
 void ANeonCarPawn::StartHandbrake(const FInputActionValue& Value)
 {
-	// add the input
-	ChaosVehicleMovement->SetHandbrakeInput(true);
+	if (RaceManager && RaceManager->bRaceStarted)
+	{
+		// add the input
+		ChaosVehicleMovement->SetHandbrakeInput(true);
 
-	// call the Blueprint hook for the break lights
-	BrakeLights(true);
+		// call the Blueprint hook for the break lights
+		BrakeLights(true);
+	}
+	
 }
 
 void ANeonCarPawn::StopHandbrake(const FInputActionValue& Value)
 {
-	// add the input
-	ChaosVehicleMovement->SetHandbrakeInput(false);
+	if (RaceManager && RaceManager->bRaceStarted)
+	{
+		// add the input
+		ChaosVehicleMovement->SetHandbrakeInput(false);
 
-	// call the Blueprint hook for the break lights
-	BrakeLights(false);
+		// call the Blueprint hook for the break lights
+		BrakeLights(false);
+	}
+	
 }
 
 void ANeonCarPawn::LookAround(const FInputActionValue& Value)
@@ -235,7 +273,7 @@ void ANeonCarPawn::UpdateRaceProgress()
 
 void ANeonCarPawn::OnCrossFinishLine()
 {
-	if (ARaceManager* RaceManager = Cast<ARaceManager>(UGameplayStatics::GetActorOfClass(GetWorld(), ARaceManager::StaticClass())))
+	if (RaceManager)
 	{
 		RaceManager->OnFinishRace(this);
 	}

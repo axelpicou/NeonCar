@@ -47,4 +47,7 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Checkpoint")
 	int32 TotalCheckpoints;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bRaceStarted = false;
 };

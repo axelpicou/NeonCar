@@ -14,19 +14,12 @@
   <component name="ChangeListManager">
     <list default="true" id="60e6574a-6e23-4afe-94c0-f01530c9c48b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Drift/BP_FinishLine.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/BP_FinishLine.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Drift/Manager/BP_Manage_Race.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Manager/BP_Manage_Race.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Drift/Widget/WBP_FinishClassement.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Widget/WBP_FinishClassement.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Drift/Widget/WBP_RaceClassement.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Widget/WBP_RaceClassement.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/UI/WB_Classement.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/4/CU/8NKLN0SW6SGF2K187FWRCZ.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/4/CU/8NKLN0SW6SGF2K187FWRCZ.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/5/X6/AI4ASLFI9ROYCUCZSC4J6A.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/5/X6/AI4ASLFI9ROYCUCZSC4J6A.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/8/QJ/JQ3ZI4E2VXZJOFME0DKHHE.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/RaceManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Private/RaceManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Public/AIVehicleControlle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Public/AIVehicleControlle.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/Public/RaceManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Public/RaceManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +49,8 @@
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/Core/Public/String/FormatStringSan.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/Core/Public/Templates/Sorting.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/Core/Tests/Internationalization/NumberFormatingRulesTest.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/CoreUObject/Public/Templates/Casts.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/Engine/Classes/GameFramework/Pawn.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/UMG/Public/Components/ScrollBox.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Epic Games/UE_5.4/Engine/Source/Runtime/WebBrowser/Private/CEF/CEFBrowserByteResource.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -214,6 +209,7 @@
       <workItem from="1739462723151" duration="3330000" />
       <workItem from="1739468105064" duration="1399000" />
       <workItem from="1739472521773" duration="9609000" />
+      <workItem from="1739484596068" duration="5736000" />
     </task>
     <servers />
   </component>

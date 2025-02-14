@@ -5,6 +5,7 @@
 
 #include "ChaosVehicleMovementComponent.h"
 #include "EngineUtils.h"
+#include "RaceManager.h"
 #include "WheeledVehiclePawn.h"
 #include "Components/SplineComponent.h"
 
@@ -21,18 +22,31 @@ void AAIVehicleControlle::BeginPlay()
 		}
 	}
 
+	for (TActorIterator<ARaceManager> It(GetWorld()); It;)
+	{
+		RaceManager = *It;
+		break;
+	}
+
 	CurrentTargetIndex = 0;
 }
 
 void AAIVehicleControlle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
 	FollowSplinePath();
 }
 
 void AAIVehicleControlle::FollowSplinePath()
 {
-	AWheeledVehiclePawn* VehiclePawn = Cast<AWheeledVehiclePawn>(GetPawn());
+	if (RaceManager && !RaceManager->bRaceStarted)
+	{
+	
+	}
+	else
+	{
+			AWheeledVehiclePawn* VehiclePawn = Cast<AWheeledVehiclePawn>(GetPawn());
 	if (!VehiclePawn || !TargetSpline) return;
 
 	USplineComponent* Spline = TargetSpline->FindComponentByClass<USplineComponent>();
@@ -79,8 +93,5 @@ void AAIVehicleControlle::FollowSplinePath()
 			CurrentTargetIndex = 0; // Recommencer la boucle
 		}
 	}
-
-	// Debugging
-	DrawDebugSphere(GetWorld(), TargetLocation, 50, 8, FColor::Green, false, 0.1f);
-	DrawDebugLine(GetWorld(), VehicleLocation, TargetLocation, FColor::Red, false, 0.1f, 0, 2.0f);
+	}
 }

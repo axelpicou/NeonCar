@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "RaceManager.h"
 #include "AIVehicleControlle.generated.h"
 
 /**
@@ -24,6 +25,7 @@ public:
 private:
 	UPROPERTY(EditAnywhere,Category = "AI")
 	AActor* TargetSpline;
+	ARaceManager* RaceManager;
 	
 	int32 CurrentTargetIndex;
 };
