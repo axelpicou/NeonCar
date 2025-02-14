@@ -46,6 +46,8 @@ class ANeonCarPawn : public AWheeledVehiclePawn
 	/** Cast pointer to the Chaos Vehicle movement component */
 	TObjectPtr<UChaosWheeledVehicleMovementComponent> ChaosVehicleMovement;
 
+	
+
 protected:
 
 	/** Steering Action */
@@ -86,9 +88,6 @@ protected:
 	AActor* TargetSpline = nullptr;
 
 	ARaceManager* RaceManager;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Race")
-	int CurrentLap = 1;
 
 	FVector LocationReset;
 	FRotator RotationReset;
@@ -162,9 +161,13 @@ public:
 	/** Finish Race Line*/
 	UFUNCTION(BlueprintCallable)
 	void OnCrossFinishLine();
-
+	
+    UFUNCTION(BlueprintCallable)
 	void ResetVehicle();
 
 	FVector SetLocation(FVector newLocation) ;
 	FRotator SetRotation(FRotator newRotation) ;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Race")
+	int CurrentLap = 1;
 };

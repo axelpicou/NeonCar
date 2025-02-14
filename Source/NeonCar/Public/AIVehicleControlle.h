@@ -25,6 +25,7 @@ public:
 private:
 	UPROPERTY(EditAnywhere,Category = "AI")
 	AActor* TargetSpline;
+	
 	ARaceManager* RaceManager;
 	
 	int32 CurrentTargetIndex;
