@@ -15,16 +15,10 @@
     <list default="true" id="60e6574a-6e23-4afe-94c0-f01530c9c48b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Drift/Vehicule/BP_Drift_Pawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Vehicule/BP_Drift_Pawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Drift/check/BP_FinishLine.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/check/BP_FinishLine.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/VehicleTemplate/Blueprints/SportsCar/BP_SportsCar_Pawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/VehicleTemplate/Blueprints/SportsCar/BP_SportsCar_Pawn.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/0/3Q/4N226STV9ZA39803ASFR12.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/0/OI/TQKO5WVBPV9LMIQM3AJQ4W.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/1/PY/AF2ZTKQYT1A5F7HZUBV0WH.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/5/X6/AI4ASLFI9ROYCUCZSC4J6A.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/5/X6/AI4ASLFI9ROYCUCZSC4J6A.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/VehicleTemplate/Maps/VehicleAdvExampleMap/6/XI/E61NHZWBUX1QQMQLIZHU7C.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Public/AIVehicleControlle.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/Public/AIVehicleControlle.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +216,8 @@
       <workItem from="1739519912212" duration="750000" />
       <workItem from="1739524289070" duration="1088000" />
       <workItem from="1739525447066" duration="1013000" />
+      <workItem from="1739529604286" duration="68000" />
+      <workItem from="1739530222713" duration="518000" />
     </task>
     <servers />
   </component>

@@ -81,7 +81,7 @@ protected:
 	/** Keeps track of which camera is active */
 	bool bFrontCameraActive = false;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Race")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Race")
 	float DistanceOnSpline = 0.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Race")
