@@ -14,11 +14,21 @@
   <component name="ChangeListManager">
     <list default="true" id="60e6574a-6e23-4afe-94c0-f01530c9c48b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonCar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Drift/Vehicule/BP_Drift_Pawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Vehicule/BP_Drift_Pawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Drift/Vehicule/CVW_DriftWheelRear.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Drift/Vehicule/CVW_DriftWheelRear.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/VehicleTemplate/Blueprints/SportsCar/BP_SportsCar_Pawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/VehicleTemplate/Blueprints/SportsCar/BP_SportsCar_Pawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeonCar.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/NeonCar.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarGameMode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/NeonCar/NeonCarPawn.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/AIVehicleControlle.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/RaceClassementWidget.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Private/RaceManager.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Public/AIVehicleControlle.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Public/RaceClassementWidget.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/NeonCar/Public/RaceManager.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +228,7 @@
       <workItem from="1739525447066" duration="1013000" />
       <workItem from="1739529604286" duration="68000" />
       <workItem from="1739530222713" duration="518000" />
+      <workItem from="1739544097581" duration="928000" />
     </task>
     <servers />
   </component>

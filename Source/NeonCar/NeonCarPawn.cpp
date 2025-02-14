@@ -11,7 +11,6 @@
 #include "InputActionValue.h"
 #include "ChaosWheeledVehicleMovementComponent.h"
 #include "EngineUtils.h"
-#include "RaceManager.h"
 #include "Components/SplineComponent.h"
 #include "Kismet/GameplayStatics.h"
 

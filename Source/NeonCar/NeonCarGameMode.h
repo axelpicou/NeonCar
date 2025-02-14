@@ -3,8 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "RaceManager.h"
+
 #include "GameFramework/GameModeBase.h"
+#include "Race/RaceManager.h"
 #include "NeonCarGameMode.generated.h"
 
 UCLASS(MinimalAPI)
